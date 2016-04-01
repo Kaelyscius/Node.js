@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="productApp">
+<head>
+    <title>Product</title>
+    <script src="angular.js"></script>
+    <script src="angular-resource.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-theme.css.css">
+    <script src="product.js"></script>
+</head>
+<body ng-controller="defaultCtrl">
+<div class="panel panel-primary">
+    <h3 class="panel-heading">Products list</h3>
+    <ng-include src="'tableView.html'" ng-show="displayMode == 'list'"></ng-include>
+    <ng-include src="'editorView.html'" ng-show="displayMode == 'edit'"></ng-include>
+</div>
+
+</body>
+
+</html>

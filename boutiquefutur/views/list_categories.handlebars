@@ -1,0 +1,45 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">create a cute category</h3>
+    </div>
+    
+    <form method="POST" action="/categories">
+        <div class="panel-body form-horizontal">
+            <div class="form-group col-md-12">
+                <label class="col-sm-2 control-label" for="libelle">libelle: </label>
+                <div class="col-md-10">
+                    <input type="text" name="libelle" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <div class="col-md-12 text-right">
+                    <button type="submit" type="button" id="login-btn" class="btn btn-success" >
+                        <i class="fa fa-plus"></i> create categorie
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">liste des categories</h3>
+    </div>
+    <div class="panel-body">
+        {{#each categories}}
+            <div class="col-md-8 text-left" style="padding-bottom: 1em;">
+                <strong> {{ libelle }} </strong> 
+            </div>
+            <div class="col-md-4 text-right" style="padding-bottom: 1em;">
+                  <button class="btn btn-danger cat-btn-delete" data-id="{{ _id }}">
+                    <i class="fa fa-times"></i>
+                </button> 
+            </div>
+            
+        {{/each}}
+    </div>
+</div>
+
+
+
